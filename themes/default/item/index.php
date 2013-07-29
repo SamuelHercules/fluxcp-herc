@@ -100,7 +100,7 @@
 			<option value="gt"<?php if ($attack_op == 'gt') echo ' selected="selected"' ?>>is greater than</option>
 			<option value="lt"<?php if ($attack_op == 'lt') echo ' selected="selected"' ?>>is less than</option>
 		</select>
-		<input type="text" name="attack" id="attack" value="<?php echo htmlspecialchars($params->get('attack')) ?>" />
+		<input type="text" name="attack" id="attack" value="<?php echo htmlspecialchars($params->get('atk')) ?>" />
 		...
 		<?php endif ?>
 		<label for="refineable">Refineable:</label>
@@ -139,7 +139,7 @@
 		<th><?php echo $paginator->sortableColumn('price_buy', 'NPC Buy') ?></th>
 		<th><?php echo $paginator->sortableColumn('price_sell', 'NPC Sell') ?></th>
 		<th><?php echo $paginator->sortableColumn('weight', 'Weight') ?></th>
-		<th><?php echo $paginator->sortableColumn('attack', 'Attack') ?></th>
+		<th><?php echo $paginator->sortableColumn('atk', 'Attack') ?></th>
 		<?php if($server->isRenewal): ?>
 		<th><?php echo $paginator->sortableColumn('matk', 'MATK') ?></th>
 		<?php endif ?>
@@ -183,10 +183,10 @@
 		<td><?php echo number_format((int)$item->price_sell) ?></td>
 		<td><?php echo round($item->weight, 1) ?></td>
 		<?php if($server->isRenewal): ?>
-			<td><?php echo number_format((int)$item->attack) ?></td>
+			<td><?php echo number_format((int)$item->atk) ?></td>
 			<td><?php echo number_format((int)$item->matk) ?></td>
 		<?php else: ?>
-			<td><?php echo number_format((int)$item->attack) ?></td>
+			<td><?php echo number_format((int)$item->atk) ?></td>
 		<?php endif ?>
 		<td><?php echo number_format((int)$item->defense) ?></td>
 		<td><?php echo number_format((int)$item->range) ?></td>

@@ -84,7 +84,7 @@
 	</tr>
 	<tr>
 		<th>Attack</th>
-		<td><?php echo number_format((int)$item->attack) ?></td>
+		<td><?php echo number_format((int)$item->atk) ?></td>
 		<th>Min Equip Level</th>
 		<td><?php echo number_format((int)$item->equip_level_min) ?></td>
 	</tr>
